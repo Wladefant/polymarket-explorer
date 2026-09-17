@@ -5,10 +5,10 @@ import { ExternalLink } from "@/components/ui/external-link";
 import { useLocalStorage } from "@/lib/hooks/use-local-storage";
 
 const NOTIFICATION = {
-	version: "5",
-	message: "How We Built Realtime Precomputed PnL for Polymarket",
+	version: "6",
+	message: "Struct and the explorer will sunset on September 30.",
 	cta: "Read the post",
-	href: "https://www.struct.to/blog/realtime-precomputed-pnl",
+	href: "https://www.struct.to/blog/sunsetting-polymarket",
 } as const;
 
 
@@ -27,7 +27,7 @@ export function NotificationBar() {
 					linkType="notification_cta"
 					className="group flex min-w-0 max-w-full items-center justify-center gap-2 text-center text-xs text-foreground/90 transition-opacity hover:opacity-90 sm:text-sm"
 				>
-					<span className="truncate">{NOTIFICATION.message}</span>
+					<span>{NOTIFICATION.message}</span>
 					<span className="hidden shrink-0 items-center gap-0.5 text-muted-foreground transition-colors group-hover:text-foreground sm:inline-flex">
 						{NOTIFICATION.cta}
 						<ArrowUpRightIcon className="size-3" />
