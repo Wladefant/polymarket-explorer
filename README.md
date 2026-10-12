@@ -139,6 +139,12 @@ Legacy routes (`/leaderboard`, `/trader/[address]`, `/market/[slug]`) permanentl
 | `pnpm lint` | Run ESLint |
 | `pnpm test:pnl` | Run the PnL calculation tests |
 
+## Continuous Integration
+
+The dedicated remote CI Worker runs `node ci/cloudflare/run.mjs`. It runs `pnpm build` and the existing `pnpm test:pnl` suite, then prints the test, pass, fail, and skipped counts.
+
+The Worker only receives a version upload. It has no product routes, Workers.dev URL, or preview URL.
+
 ## Environment Variables
 
 | Variable | Required | Default | Description |
